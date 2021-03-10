@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <br>
+    <div align="center" class="d-none d-sm-none d-md-block">
+        <br />
+        <img src="assets/logo.png" alt="LOGO_ILM_ERROR!" width="15%" height="15%">
+    </div>
+    <div class="container">
+        <div class="row col-md-12">
+            <mat-card class="card-login offset-md-3 col-md-6">
+                <mat-card-header>
+                    <img mat-card-avatar src="assets/user.png">
+                    <mat-card-title>Accesso de Usuario</mat-card-title>
+                    <mat-card-subtitle>Hunter Douglas Monterrey</mat-card-subtitle>
+                </mat-card-header>
+                <div class="row">
+                    <div class="col-md-12">
+                        <br>
+                        <mat-form-field class="offset-md-1 col-md-10">
+                            <mat-label>Nombre de Usuario</mat-label>
+                            <!-- <input matInput id="user" [(ngModel)]="user" placeholder="Ingrese usuario Ej. HALANIZ2" /> -->
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="offset-md-1 col-md-10">
+                            <mat-label>Contraseña</mat-label>
+                            <!-- <input matInput [(ngModel)]="password" placeholder="*******" id="password" type="password" (keyup.enter)="postData()"> -->
+                        </mat-form-field>
+                        <br>
+                    </div>
+                </div>
+                <!-- <button type="button" id="btnLogin" class="btn btn-primary" (click)="postData()">Login</button> -->
+                <!-- <div *ngIf="isLoginError" class="red-text center error-message"> -->
+                    <i class="material-icons">Error</i> usuario o contraseña incorrectos
+                <!-- </div> -->
+            </mat-card>
+        </div>
+
+    </div>
+    <div class="d-none d-sm-none d-md-block">
+        <footer class="footer">
+            <div class="container">
+                <div class="col-md-12">
+                    <span class="text-white"> Hunter Douglas Company © 2021 - Developed By ILM
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
