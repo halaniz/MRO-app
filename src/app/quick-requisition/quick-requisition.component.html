@@ -1,1 +1,270 @@
-<p>quick-requisition works!</p>
+<app-menu></app-menu>
+<div class="container-fluid">
+    <mat-card>
+        <mat-card-header>
+            <img mat-card-avatar src="assets/Requisicion.png">
+            <mat-card-title>Agregar Requisicion</mat-card-title>
+            <mat-card-subtitle>Agregar una nueva requisicion
+            </mat-card-subtitle>
+        </mat-card-header>
+        <div class="container-fluid border">
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-card>
+                        <br />
+                        <br />
+                        <mat-card-content>
+                            <b> Datos </b>
+                            <hr />
+                            <div class="row">                                
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>group</mat-icon> Departamento
+                                    </mat-label>
+                                    <mat-select matInput id="Departamento" name="Departamento" matInput
+                                    placeholder="Departamento">
+                                    <mat-option [value]="'Test1'">Test1</mat-option>
+                                    <mat-option [value]="'Test2'">Test2</mat-option>
+                                </mat-select>
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>account_balance</mat-icon> Nombre de Cuenta
+                                    </mat-label>
+                                    <mat-select matInput id="Nombre de Cuenta" name="Nombre de Cuenta" matInput
+                                    placeholder="Nombre de Cuenta">
+                                    <mat-option [value]="'Test1'">Test1</mat-option>
+                                    <mat-option [value]="'Test2'">Test2</mat-option>
+                                </mat-select>
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>account_circle</mat-icon> Proveedor
+                                    </mat-label>
+                                    <input type="text" id="Proveedor" matInput placeholder="Nombre del Proveedor" />
+                                </mat-form-field>
+                                <mat-form-field class="col-8">
+                                    <mat-label>
+                                        <mat-icon>article</mat-icon> Articulo
+                                    </mat-label>
+                                    <input type="text" id="Articulo" matInput placeholder="Nombre del Articulo" />
+                                </mat-form-field>
+                                <mat-form-field class="col-1">
+                                    <mat-label>
+                                        <mat-icon>plus_one</mat-icon> Cantidad
+                                    </mat-label>
+                                    <input type="text" id="Cantidad" matInput placeholder="Cantidad" />
+                                </mat-form-field>
+                                <mat-form-field class="col-1.5">
+                                    <mat-label>
+                                        <mat-icon>square_foot</mat-icon> Unidad
+                                    </mat-label>
+                                    <mat-select matInput id="Unidad" name="Unidad" matInput
+                                    placeholder="Unidad">
+                                    <mat-option [value]="'Test1'">Test1</mat-option>
+                                    <mat-option [value]="'Test2'">Test2</mat-option>
+                                </mat-select>
+                                </mat-form-field>
+                                <mat-form-field class="col-1">
+                                    <mat-label>
+                                        <mat-icon>attach_money</mat-icon> P.U.
+                                    </mat-label>
+                                    <input type="text" id="PU" matInput placeholder="Precio Unitario" />
+                                </mat-form-field>
+                                <table>
+                                    <tr>
+                                        <td style="width: 2000px;"></td>
+                                        <td style="width: 500px;">
+                                            <button class="btn btn-success offset-md-6">
+                                                Agregar Material
+                                            </button>                                
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-12">
+                            <div class="row">
+                                <mat-tab-group>
+                                    <mat-tab label='Articulos'>
+                                  <table mat-table multiTemplateDataRows class="mat-elevation-z8">
+                                  <!-- <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8"> -->
+                                    <ng-container matColumnDef="acciones">
+                                      <th mat-header-cell *matHeaderCellDef> </th>
+                                      <th mat-header-cell *matCellDef="let element">
+                                          <div class="row">
+                                            <button  type="button" class="btn btn-warning btn-sm">
+                                              <!-- <button  type="button" class="btn btn-warning btn-sm" (click)="editContract(element.cb_codigo)"> -->
+                                                  <mat-icon>edit</mat-icon>
+                                              </button>
+                            
+                                          </div>
+                                      </th>
+                                  </ng-container>
+                                    <ng-container matColumnDef="cb_codigo">
+                                      <th mat-header-cell *matHeaderCellDef>No. Empleado</th>
+                                      <td mat-cell style="font-size: x-small; text-align: center;" *matCellDef="let element">
+                                        {{element.cb_codigo}} </td>
+                                    </ng-container>
+                                    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+                                  </table>
+                                  <div class="">
+                                  <!-- <div class="" *ngIf="dataSource.data.length<=0"> -->                                    
+                                  </div>
+                                  <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+                                </mat-tab>
+                                  </mat-tab-group>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="col-md-12">
+                            <div class="row">
+                                <table style="width:100%">
+                                    <tr>
+                                        <th style="width:10%">
+                                    <mat-label>
+                                        <mat-icon>date_range</mat-icon> Fecha
+                                    </mat-label>
+                                        </th>
+                                        <th style="width:10%">
+                                    <mat-label>
+                                        <mat-icon>attach_money</mat-icon> Presupuesto
+                                    </mat-label>
+                                        </th>
+                                        <th style="width:70%">
+                                    <mat-label>
+                                        <mat-icon>price_change</mat-icon> Tipo de cambio
+                                    </mat-label>
+                                        </th>                                        
+                                    </tr>
+                                </table>
+                                <table style="width:100%" >
+                                     <tr>
+                                         <td style="width:100%" ></td>
+                                        <td>
+                                            <mat-form-field>
+                                                <mat-label>
+                                                    <mat-icon>local_shipping</mat-icon> Flete
+                                                </mat-label>
+                                                <input type="text" id="Flete" matInput placeholder="Flete" />
+                                            </mat-form-field>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:100%" ></td>
+                                        <td>
+                                            <mat-form-field>
+                                                <mat-label>
+                                                    <mat-icon>attach_money</mat-icon> Sub-Total
+                                                </mat-label>
+                                                <input type="text" id="Sub-Total" matInput placeholder="Sub-Total"/>
+                                            </mat-form-field>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:100%" ></td>
+                                        <td>
+                                            <mat-form-field>
+                                                <mat-label>
+                                                    <mat-icon>attach_money</mat-icon> I.V.A.
+                                                </mat-label>
+                                                <input type="text" id="IVA" matInput placeholder="IVA"/>
+                                            </mat-form-field>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:100%" ></td>
+                                        <td>
+                                            <mat-form-field>
+                                                <mat-label>
+                                                    <mat-icon>attach_money</mat-icon> IVA-Flete
+                                                </mat-label>
+                                                <input type="text" id="IVA-Flete" matInput placeholder="IVA-Flete"/>
+                                            </mat-form-field>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:100%" ></td>
+                                        <td>
+                                            <mat-form-field>
+                                                <mat-label>
+                                                    <mat-icon>attach_money</mat-icon> TOTAL
+                                                </mat-label>
+                                                <input type="text" id="TOTAL" matInput placeholder="TOTAL"/>
+                                            </mat-form-field>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td>
+                                                <mat-form-field class="example-full-width">
+                                                    <th>
+                                                    <mat-label>
+                                                        <mat-icon>format_align_justify</mat-icon> Justificacion
+                                                    </mat-label>
+                                                </th>
+                                                    <textarea matInput
+                                                              cdkTextareaAutosize
+                                                              #autosize="cdkTextareaAutosize"
+                                                              cdkAutosizeMinRows="1"
+                                                              cdkAutosizeMaxRows="5"></textarea>
+                                                  </mat-form-field>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td style="width:90%"></td>
+                                            <td style="width:20%"> 
+                                                <mat-radio-group>
+                                                    <th>
+                                                        <mat-label>
+                                                            <mat-icon>money</mat-icon> Tipo de moneda
+                                                        </mat-label>
+                                                    </th>
+                                                    <mat-radio-button value="MX">MX</mat-radio-button>
+                                                    <mat-radio-button value="DLLS">DLLS</mat-radio-button>
+                                                  </mat-radio-group>
+                                            </td>
+                                            <td style="width:20%"></td>
+                                            <td>
+                                                <mat-radio-group>
+                                                    <th>
+                                                        <mat-label>
+                                                            <mat-icon>assignment</mat-icon> Solicitud
+                                                        </mat-label>
+                                                    </th>
+                                                    <mat-radio-button value="Ordinario">Ordinario</mat-radio-button>
+                                                    <mat-radio-button value="Urgente">Urgente</mat-radio-button>
+                                                    <mat-radio-button value="Inmediato">Inmediato</mat-radio-button>
+                                                  </mat-radio-group>
+                                            </td>                                            
+                                        </tr>
+                                        <tr style="height: 50px;">
+                                        </tr>
+                                    </table>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td style="width:50%"></td>
+                                            <td style="width:5%">
+                                                <button class="btn btn-success offset-md-6">
+                                                    Regresar
+                                                </button>                                
+                                            </td>
+                                            <td style="width:5%">
+                                                <button class="btn btn-success offset-md-6">
+                                                    Generar
+                                                </button>                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </div>
+                        </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+

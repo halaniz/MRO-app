@@ -9,6 +9,8 @@ export class QuickRequisitionComponent implements OnInit {
 
   constructor() { }
 
+  
+
   ngOnInit(): void {
   }
 

@@ -14,11 +14,11 @@ export class ApiRuta{
     //serverUrl="http://10.35.64.27:9798/";
 
 
-    headers= new HttpHeaders()
-    .set('Access-Control-Allow-Credentials' , 'true')
-    .set('Access-Control-Allow-Origin', '*')
-    .set('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, PUT, OPTIONS')
-    .set('Access-Control-Allow-Headers', 'Origin, Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, X-Auth-Token');
+    // headers= new HttpHeaders()
+    // .set('Access-Control-Allow-Credentials' , 'true')
+    // .set('Access-Control-Allow-Origin', '*')
+    // .set('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, PUT, OPTIONS')
+    // .set('Access-Control-Allow-Headers', 'Origin, Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, X-Auth-Token');
 
 
     api(){
@@ -113,31 +113,31 @@ export class ApiRuta{
     // }
 
 
-    putImage(url:string,values:any){
+    // putImage(url:string,values:any){
 
-      var urlFull=url;
-     // var token = localStorage.getItem('userToken').replace(/['"]+/g, '');
-      var headers={ 'Authorization': 'Bearer  ' , 'My-Custom-Header': 'foobar' };
+    //   var urlFull=url;
+    //  // var token = localStorage.getItem('userToken').replace(/['"]+/g, '');
+    //   var headers={ 'Authorization': 'Bearer  ' , 'My-Custom-Header': 'foobar' };
 
-      try{
-            return this.http.put(urlFull, values, {responseType: 'arraybuffer',headers:headers});
-      }
-      catch(e){
-          this.messaggeError(e);
-          console.log(JSON.stringify(e)+'CATCH');
-          return null;
-        };
-    }
+    //   try{
+    //         return this.http.put(urlFull, values, {responseType: 'arraybuffer',headers:headers});
+    //   }
+    //   catch(e){
+    //       this.messaggeError(e);
+    //       console.log(JSON.stringify(e)+'CATCH');
+    //       return null;
+    //     };
+    // }
 
 
 
-    messaggeError(data: any) {
-      Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: 'DATABASE ERROR',
-        text: JSON.stringify(data),
-        footer: '<a href="https://apps.hunterdouglas.com/SupportRequest/request" target="_blank">Report To IT Developers</a>'
-      })
-    }
+    // messaggeError(data: any) {
+    //   Swal.fire({
+    //     position: 'center',
+    //     icon: 'error',
+    //     title: 'DATABASE ERROR',
+    //     text: JSON.stringify(data),
+    //     footer: '<a href="https://apps.hunterdouglas.com/SupportRequest/request" target="_blank">Report To IT Developers</a>'
+    //   })
+    // }
 }
