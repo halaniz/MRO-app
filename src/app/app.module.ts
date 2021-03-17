@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoffComponent } from './signoff/signoff.component';
+import { ManagersPendingsComponent } from './managers-pendings/managers-pendings.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SignoffComponent } from './signoff/signoff.component';
     HomePageComponent,
     LoginComponent,
     SignoffComponent,
+    ManagersPendingsComponent,
   ],
   imports: [
     BrowserModule,

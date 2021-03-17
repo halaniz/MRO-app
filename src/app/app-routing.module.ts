@@ -5,6 +5,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from "./menu/menu.component";
 import { QuickRequisitionComponent } from "./quick-requisition/quick-requisition.component";
+import { ManagersPendingsComponent} from "./managers-pendings/managers-pendings.component";
 //import { AuthAdminGuard } from './guards/auth-admin.guard';
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'Menu', component: MenuComponent},
   { path: 'HomePage', component: HomePageComponent},
   { path: 'Login', component: LoginComponent},
-  { path: 'Quickrequisition', component: QuickRequisitionComponent}
+  { path: 'Quickrequisition', component: QuickRequisitionComponent},
+  { path: 'Managerspendings', component: ManagersPendingsComponent}
 ]
 
 @NgModule({
