@@ -9,19 +9,21 @@
         <button mat-button routerLink="/Quickrequisition">Requisiciones</button>
         <button mat-button [matMenuTriggerFor]="Supervision">Supervision</button>
         <mat-menu #Supervision="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="RequisicionesPendientes">Requisiciones Pendientes</button>            
-            <button mat-menu-item>Historial</button>
+            <button mat-menu-item routerLink="/Managerspendings">Requisiciones Pendientes</button>            
+            <!-- <button mat-menu-item>Historial</button>
             <button mat-menu-item>Requisitores</button>
-            <button mat-menu-item>Vacaciones</button>
-        </mat-menu>
-        <mat-menu #RequisicionesPendientes="matMenu">
-            <button mat-menu-item routerLink="/Managerspendings">ILM</button>
-        </mat-menu>
-        <button mat-button routerLink="">Finanzas</button>
-        <button mat-button routerLink="">Orden de Compra</button>
+            <button mat-menu-item>Vacaciones</button> -->
+        </mat-menu>        
+        <button mat-button [matMenuTriggerFor]="Administracion">Administracion</button>   
+        <mat-menu #Administracion="matMenu">
+            <button mat-menu-item routerLink="/Controllerpendings">Requisiciones Pendientes</button>
+        </mat-menu>     
         <button mat-button routerLink="">Almacen</button>
         <button mat-button routerLink="">Contabilidad</button>
-        <button mat-button routerLink="">Proveedores</button>
+        <button mat-button [matMenuTriggerFor]="Proveedores">Proveedores</button>
+        <mat-menu #Proveedores="matMenu">
+            <button mat-menu-item>Compras</button>
+        </mat-menu>
         <button mat-button routerLink="">Reportes</button>
         <button mat-button routerLink="">Configuracion</button>
         <a mat-button [routerLink]="['/signoff']">Salir</a>

@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from "./menu/menu.component";
 import { QuickRequisitionComponent } from "./quick-requisition/quick-requisition.component";
 import { ManagersPendingsComponent} from "./managers-pendings/managers-pendings.component";
+import { ControllerPendingsComponent } from "./controller-pendings/controller-pendings.component";
 //import { AuthAdminGuard } from './guards/auth-admin.guard';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'HomePage', component: HomePageComponent},
   { path: 'Login', component: LoginComponent},
   { path: 'Quickrequisition', component: QuickRequisitionComponent},
-  { path: 'Managerspendings', component: ManagersPendingsComponent}
+  { path: 'Managerspendings', component: ManagersPendingsComponent},
+  { path: 'Controllerpendings', component: ControllerPendingsComponent}
 ]
 
 @NgModule({

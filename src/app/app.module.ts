@@ -13,6 +13,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoffComponent } from './signoff/signoff.component';
 import { ManagersPendingsComponent } from './managers-pendings/managers-pendings.component';
+import { ControllerPendingsComponent } from './controller-pendings/controller-pendings.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ManagersPendingsComponent } from './managers-pendings/managers-pendings
     LoginComponent,
     SignoffComponent,
     ManagersPendingsComponent,
+    ControllerPendingsComponent,
   ],
   imports: [
     BrowserModule,
