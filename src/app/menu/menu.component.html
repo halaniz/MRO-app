@@ -19,11 +19,19 @@
             <button mat-menu-item routerLink="/Controllerpendings">Requisiciones Pendientes</button>
         </mat-menu>     
         <button mat-button routerLink="">Almacen</button>
-        <button mat-button routerLink="">Contabilidad</button>
-        <button mat-button [matMenuTriggerFor]="Proveedores">Proveedores</button>
-        <mat-menu #Proveedores="matMenu">
-            <button mat-menu-item>Compras</button>
-        </mat-menu>
+        <button mat-button routerLink="">Contabilidad</button>    
+            <button mat-button [matMenuTriggerFor]="Compras">Compras</button>
+        <mat-menu #Compras="matMenu">
+            <button mat-menu-item routerLink="/Purchaseapproved">Aprobados</button>
+            <button mat-menu-item routerLink="/Purchaseorders">Pendientes</button>
+            <button mat-menu-item routerLink="/Passmro">Correo</button>
+            <button mat-menu-item routerLink="/Editarpo">Modificar</button>
+            <button mat-menu-item [matMenuTriggerFor]="Proveedores" >Proveedores</button>
+            <mat-menu #Proveedores="matMenu">
+            <button mat-menu-item routerLink="">Agregar</button>
+            <button mat-menu-item routerLink="">Modificar</button>
+            </mat-menu>            
+        </mat-menu>    
         <button mat-button routerLink="">Reportes</button>
         <button mat-button routerLink="">Configuracion</button>
         <a mat-button [routerLink]="['/signoff']">Salir</a>

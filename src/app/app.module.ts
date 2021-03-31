@@ -14,6 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignoffComponent } from './signoff/signoff.component';
 import { ManagersPendingsComponent } from './managers-pendings/managers-pendings.component';
 import { ControllerPendingsComponent } from './controller-pendings/controller-pendings.component';
+import { EditarPoComponent } from './editar-po/editar-po.component';
+import { PurchaseApprovedComponent } from './purchase-approved/purchase-approved.component';
+import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.component';
+import { PassMroComponent } from './pass-mro/pass-mro.component';
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import { ControllerPendingsComponent } from './controller-pendings/controller-pe
     SignoffComponent,
     ManagersPendingsComponent,
     ControllerPendingsComponent,
+    EditarPoComponent,
+    PurchaseApprovedComponent,
+    PurchaseOrdersComponent,
+    PassMroComponent,
   ],
   imports: [
     BrowserModule,

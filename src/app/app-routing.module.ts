@@ -7,6 +7,10 @@ import { MenuComponent } from "./menu/menu.component";
 import { QuickRequisitionComponent } from "./quick-requisition/quick-requisition.component";
 import { ManagersPendingsComponent} from "./managers-pendings/managers-pendings.component";
 import { ControllerPendingsComponent } from "./controller-pendings/controller-pendings.component";
+import { EditarPoComponent} from "./editar-po/editar-po.component";
+import { PurchaseApprovedComponent} from "./purchase-approved/purchase-approved.component";
+import { PurchaseOrdersComponent} from "./purchase-orders/purchase-orders.component";
+import { PassMroComponent} from "./pass-mro/pass-mro.component";
 //import { AuthAdminGuard } from './guards/auth-admin.guard';
 
 const routes: Routes = [
@@ -16,7 +20,11 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent},
   { path: 'Quickrequisition', component: QuickRequisitionComponent},
   { path: 'Managerspendings', component: ManagersPendingsComponent},
-  { path: 'Controllerpendings', component: ControllerPendingsComponent}
+  { path: 'Controllerpendings', component: ControllerPendingsComponent},
+  { path: 'Editarpo', component: EditarPoComponent},
+  { path: 'Purchaseapproved', component: PurchaseApprovedComponent},
+  { path: 'Purchaseorders' , component: PurchaseOrdersComponent},
+  { path: 'Passmro' , component: PassMroComponent}
 ]
 
 @NgModule({

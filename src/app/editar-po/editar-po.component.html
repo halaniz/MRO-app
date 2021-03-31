@@ -2,9 +2,9 @@
 <div class="container-fluid">
     <mat-card>
         <mat-card-header>
-            <img mat-card-avatar src="assets/Requisicion.png">
-            <mat-card-title>Agregar Requisicion</mat-card-title>
-            <mat-card-subtitle>Agregar una nueva requisicion
+            <img mat-card-avatar src="assets/editarpo.png">
+            <mat-card-title>Editar</mat-card-title>
+            <mat-card-subtitle>Editar Orden de Compra
             </mat-card-subtitle>
         </mat-card-header>
         <div class="container-fluid border">
@@ -16,16 +16,25 @@
                         <mat-card-content>
                             <b> Datos </b>
                             <hr />
-                            <div class="row">                                
+                            <div class="row">
+                                <table style="width:100%">
+                                <tr>
+                                    <td>
+                                        <mat-form-field>
+                                            <mat-label>
+                                                <mat-icon>article</mat-icon> Requisicion / P.O.
+                                            </mat-label>
+                                            <input type="text" id="Requisicion" matInput placeholder="Numero de requisicion" />
+                                        </mat-form-field>
+                                    </td>                               
+                                </tr>
+                                <tr style="height: 50px;"></tr>
+                                </table>                                                                                                     
                                 <mat-form-field class="col-4">
                                     <mat-label>
                                         <mat-icon>group</mat-icon> Departamento
                                     </mat-label>
-                                    <mat-select matInput id="Departamento" name="Departamento" matInput
-                                    placeholder="Departamento">
-                                    <mat-option [value]="'Test1'">Test1</mat-option>
-                                    <mat-option [value]="'Test2'">Test2</mat-option>
-                                </mat-select>
+                                    <input type="text" id="Departamento" matInput placeholder="Nombre del departamento" />
                                 </mat-form-field>
                                 <mat-form-field class="col-4">
                                     <mat-label>
@@ -41,7 +50,11 @@
                                     <mat-label>
                                         <mat-icon>account_circle</mat-icon> Proveedor
                                     </mat-label>
-                                    <input type="text" id="Proveedor" matInput placeholder="Nombre del Proveedor" />
+                                    <mat-select matInput id="Proveedor" name="Proveedor" matInput
+                                    placeholder="Nombre del proveedor">
+                                    <mat-option [value]="'Test1'">Test1</mat-option>
+                                    <mat-option [value]="'Test2'">Test2</mat-option>
+                                </mat-select>
                                 </mat-form-field>
                                 <mat-form-field class="col-8">
                                     <mat-label>
@@ -73,11 +86,21 @@
                                 </mat-form-field>
                                 <table>
                                     <tr>
-                                        <td style="width: 2000px;"></td>
-                                        <td style="width: 500px;">
+                                        <td style="width: 1400px;"></td>
+                                        <td style="width: 100px;">
                                             <button class="btn btn-success offset-md-6">
-                                                Agregar Material
+                                                Agregar
                                             </button>                                
+                                        </td>
+                                        <td style="width: 100px;">
+                                            <button class="btn btn-success offset-md-6">
+                                                Actualizar
+                                            </button>                                
+                                        </td>
+                                        <td style="width: 100px;">
+                                            <button class="btn btn-success offset-md-6">
+                                                Borrar
+                                            </button>         
                                         </td>
                                     </tr>
                                 </table>
@@ -150,22 +173,43 @@
                             <div class="row">
                                 <table style="width:100%">
                                     <tr>
-                                        <th style="width:10%">
-                                    <mat-label>
-                                        <mat-icon>date_range</mat-icon> Fecha
-                                    </mat-label>
-                                        </th>
-                                        <th style="width:10%">
+                                        <th style="width:5%">
                                     <mat-label>
                                         <mat-icon>attach_money</mat-icon> Presupuesto
                                     </mat-label>
                                         </th>
-                                        <th style="width:70%">
+                                        <th style="width:5%">
                                     <mat-label>
-                                        <mat-icon>price_change</mat-icon> Tipo de cambio
+                                        <mat-icon>account_box</mat-icon> Requisitor
                                     </mat-label>
-                                        </th>                                        
+                                        </th>
+                                        <th style="width:5%">
+                                    <mat-label>
+                                        <mat-icon>account_circle</mat-icon> Jefe de area
+                                    </mat-label>
+                                        </th>
+                                        <th style="width:5%">
+                                    <mat-label>
+                                        <mat-icon>account_circle</mat-icon> Gerente
+                                    </mat-label>
+                                        </th>
+                                        <th style="width:5%">
+                                    <mat-label>
+                                        <mat-icon>signal_cellular_alt</mat-icon> Etapa
+                                    </mat-label>
+                                        </th>
+                                        <th style="width:5%">
+                                    <mat-label>
+                                        <mat-icon>analytics</mat-icon> Estado
+                                    </mat-label>
+                                        </th>
+                                        <th style="width:5%">
+                                    <mat-label>
+                                        <mat-icon>date_range</mat-icon> Fecha de Creacion
+                                    </mat-label>
+                                        </th>                                                         
                                     </tr>
+                                    <tr style="height: 50px;"></tr>
                                 </table>
                                 <table style="width:100%" >
                                      <tr>
@@ -223,9 +267,51 @@
                                             </mat-form-field>
                                         </td>
                                     </tr>
+                                    <table style="width:100%">
+                                        <tr>                                            
+                                            <td style="width:100%"></td>
+                                            <td style="width:5%">
+                                                <button class="btn btn-success offset-md-6">
+                                                    Recalcular
+                                                </button>                                
+                                            </td>
+                                        </tr>
+                                    </table>
                                     </table>
                                     <table style="width:100%">
                                         <tr>
+                                            <td>
+                                                <mat-form-field class="example-full-width">
+                                                    <th>
+                                                    <mat-label>
+                                                        <mat-icon>format_align_justify</mat-icon> Comentarios Gerencia
+                                                    </mat-label>
+                                                </th>
+                                                    <textarea matInput
+                                                              cdkTextareaAutosize
+                                                              #autosize="cdkTextareaAutosize"
+                                                              cdkAutosizeMinRows="1"
+                                                              cdkAutosizeMaxRows="5"></textarea>
+                                                  </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <mat-form-field class="example-full-width">
+                                                    <th>
+                                                    <mat-label>
+                                                        <mat-icon>format_align_justify</mat-icon> Comentarios Jefe de area
+                                                    </mat-label>
+                                                </th>
+                                                    <textarea matInput
+                                                              cdkTextareaAutosize
+                                                              #autosize="cdkTextareaAutosize"
+                                                              cdkAutosizeMinRows="1"
+                                                              cdkAutosizeMaxRows="5"></textarea>
+                                                  </mat-form-field>
+                                            </td>
+                                        </tr>
+                                        <tr>                                            
                                             <td>
                                                 <mat-form-field class="example-full-width">
                                                     <th>
@@ -295,4 +381,5 @@
                 </div>
             </div>
         </div>
+
 
