@@ -11,6 +11,9 @@ import { EditarPoComponent} from "./editar-po/editar-po.component";
 import { PurchaseApprovedComponent} from "./purchase-approved/purchase-approved.component";
 import { PurchaseOrdersComponent} from "./purchase-orders/purchase-orders.component";
 import { PassMroComponent} from "./pass-mro/pass-mro.component";
+import { AddProvidersComponent} from "./add-providers/add-providers.component";
+import { ModProvidersComponent} from "./mod-providers/mod-providers.component";
+import { UsuariosAddComponent} from "./usuarios-add/usuarios-add.component";
 //import { AuthAdminGuard } from './guards/auth-admin.guard';
 
 const routes: Routes = [
@@ -24,7 +27,10 @@ const routes: Routes = [
   { path: 'Editarpo', component: EditarPoComponent},
   { path: 'Purchaseapproved', component: PurchaseApprovedComponent},
   { path: 'Purchaseorders' , component: PurchaseOrdersComponent},
-  { path: 'Passmro' , component: PassMroComponent}
+  { path: 'Passmro' , component: PassMroComponent},
+  { path: 'Addproviders', component: AddProvidersComponent},
+  { path: 'Modproviders', component: ModProvidersComponent},
+  { path: 'Usuariosadd', component: UsuariosAddComponent}
 ]
 
 @NgModule({

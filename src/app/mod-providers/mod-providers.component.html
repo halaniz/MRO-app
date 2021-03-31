@@ -1,0 +1,177 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+    <mat-card>
+        <mat-card-header>
+            <img mat-card-avatar src="assets/edit.png">
+            <mat-card-title>Modificar Proveedor</mat-card-title>
+            <mat-card-subtitle>Modificar un proveedor
+            </mat-card-subtitle>
+        </mat-card-header>
+        <div class="container-fluid border">
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-card>
+                        <br />
+                        <br />
+                        <mat-card-content>
+                            <b> Datos </b>
+                            <hr />
+                            <div class="col-md-12">
+                                <div class="row">
+                                        <table style="width:100%">
+                                            <tr>
+                                                <td style="width:80%"></td>
+                                                <td style="width:100%"> 
+                                                    <mat-radio-group>
+                                                        <th>
+                                                            <mat-label>
+                                                                <mat-icon>money</mat-icon> Tipo de moneda
+                                                            </mat-label>
+                                                        </th>
+                                                        <mat-radio-button value="MX">MX</mat-radio-button>
+                                                        <mat-radio-button value="DLLS">DLLS</mat-radio-button>
+                                                      </mat-radio-group>
+                                                </td>
+                                                <td style="width:20%"></td>                                           
+                                            </tr>
+                                        </table>
+                                </div>
+                            </div>
+                            <div class="row">                                
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>account_circle</mat-icon> Nombre Fiscal
+                                    </mat-label>
+                                    <input type="text" id="NombreFiscal" matInput placeholder="Nombre Fiscal" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>account_circle</mat-icon> Nombre Comercial
+                                    </mat-label>
+                                    <input type="text" id="NombreComercial" matInput placeholder="Nombre Comercial" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>account_balance</mat-icon> Cuenta
+                                    </mat-label>
+                                    <input type="text" id="Cuenta" matInput placeholder="Cuenta" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>account_circle</mat-icon> Rubro
+                                    </mat-label>
+                                    <input type="text" id="Rubro" matInput placeholder="Rubro" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>perm_contact_calendar</mat-icon> Contacto
+                                    </mat-label>
+                                    <input type="text" id="Contacto" matInput placeholder="Contacto" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>perm_contact_calendar</mat-icon> Contacto 2 (Opcional)
+                                    </mat-label>
+                                    <input type="text" id="Contacto2" matInput placeholder="Contacto 2" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>alternate_email</mat-icon> Correo Electronico
+                                    </mat-label>
+                                    <input type="text" id="CorreoElectronico" matInput placeholder="Correo Electronico" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>call</mat-icon> Telefono
+                                    </mat-label>
+                                    <input type="text" id="Telefono" matInput placeholder="Telefono" />
+                                </mat-form-field>
+                                <mat-form-field class="col-4">
+                                    <mat-label>
+                                        <mat-icon>call</mat-icon> Telefono 2 (Opcional)
+                                    </mat-label>
+                                    <input type="text" id="Telefono2" matInput placeholder="Telefono 2" />
+                                </mat-form-field>
+                                <table>
+                                    <tr>
+                                        <td style="width: 2000px;"></td>
+                                        <td style="width: 500px;">
+                                            <button class="btn btn-success offset-md-6">
+                                                Modificar
+                                            </button>                                
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-12">
+                            <div class="row">
+                                <mat-tab-group>
+                                    <mat-tab label='Proveedores MX'>
+                                  <table mat-table multiTemplateDataRows class="mat-elevation-z8">
+                                  <!-- <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8"> -->
+                                    <ng-container matColumnDef="acciones">
+                                      <th mat-header-cell *matHeaderCellDef> </th>
+                                      <th mat-header-cell *matCellDef="let element">
+                                          <div class="row">
+                                            <button  type="button" class="btn btn-warning btn-sm">
+                                              <!-- <button  type="button" class="btn btn-warning btn-sm" (click)="editContract(element.cb_codigo)"> -->
+                                                  <mat-icon>edit</mat-icon>
+                                              </button>
+                            
+                                          </div>
+                                      </th>
+                                  </ng-container>
+                                    <ng-container matColumnDef="cb_codigo">
+                                      <th mat-header-cell *matHeaderCellDef>No. Empleado</th>
+                                      <td mat-cell style="font-size: x-small; text-align: center;" *matCellDef="let element">
+                                        {{element.cb_codigo}} </td>
+                                    </ng-container>
+                                    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+                                  </table>
+                                  <div class="">
+                                  <!-- <div class="" *ngIf="dataSource.data.length<=0"> -->                                    
+                                  </div>
+                                  <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+                                </mat-tab>
+                                <mat-tab label='Proveedores US'>
+                                    <table mat-table multiTemplateDataRows class="mat-elevation-z8">
+                                    <!-- <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8"> -->
+                                      <ng-container matColumnDef="acciones">
+                                        <th mat-header-cell *matHeaderCellDef> </th>
+                                        <th mat-header-cell *matCellDef="let element">
+                                            <div class="row">
+                                              <button  type="button" class="btn btn-warning btn-sm">
+                                                <!-- <button  type="button" class="btn btn-warning btn-sm" (click)="editContract(element.cb_codigo)"> -->
+                                                    <mat-icon>edit</mat-icon>
+                                                </button>
+                              
+                                            </div>
+                                        </th>
+                                    </ng-container>
+                                      <ng-container matColumnDef="cb_codigo">
+                                        <th mat-header-cell *matHeaderCellDef>No. Empleado</th>
+                                        <td mat-cell style="font-size: x-small; text-align: center;" *matCellDef="let element">
+                                          {{element.cb_codigo}} </td>
+                                      </ng-container>
+                                      <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+                                    </table>
+                                    <div class="">
+                                    <!-- <div class="" *ngIf="dataSource.data.length<=0"> -->                                    
+                                    </div>
+                                    <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+                                  </mat-tab>
+                                  </mat-tab-group>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+
+
+

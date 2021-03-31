@@ -18,6 +18,9 @@ import { EditarPoComponent } from './editar-po/editar-po.component';
 import { PurchaseApprovedComponent } from './purchase-approved/purchase-approved.component';
 import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.component';
 import { PassMroComponent } from './pass-mro/pass-mro.component';
+import { AddProvidersComponent } from './add-providers/add-providers.component';
+import { ModProvidersComponent } from './mod-providers/mod-providers.component';
+import { UsuariosAddComponent } from './usuarios-add/usuarios-add.component';
 
 
 @NgModule({
@@ -34,6 +37,9 @@ import { PassMroComponent } from './pass-mro/pass-mro.component';
     PurchaseApprovedComponent,
     PurchaseOrdersComponent,
     PassMroComponent,
+    AddProvidersComponent,
+    ModProvidersComponent,
+    UsuariosAddComponent,
   ],
   imports: [
     BrowserModule,

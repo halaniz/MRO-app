@@ -28,12 +28,27 @@
             <button mat-menu-item routerLink="/Editarpo">Modificar</button>
             <button mat-menu-item [matMenuTriggerFor]="Proveedores" >Proveedores</button>
             <mat-menu #Proveedores="matMenu">
-            <button mat-menu-item routerLink="">Agregar</button>
-            <button mat-menu-item routerLink="">Modificar</button>
+            <button mat-menu-item routerLink="/Addproviders">Agregar</button>
+            <button mat-menu-item routerLink="/Modproviders">Modificar</button>
             </mat-menu>            
         </mat-menu>    
         <button mat-button routerLink="">Reportes</button>
-        <button mat-button routerLink="">Configuracion</button>
+        <button mat-button [matMenuTriggerFor]="Configuracion">Configuracion</button>
+        <mat-menu #Configuracion="matMenu">
+            <button mat-menu-item routerLink="">Cambiar Contraseña</button>
+            <button mat-menu-item [matMenuTriggerFor]="Usuarios" >Usuarios</button>
+            <mat-menu #Usuarios="matMenu">
+                <button mat-menu-item routerLink="/Usuariosadd">Agregar</button>
+                <button mat-menu-item routerLink="">Modificar</button>
+                <button mat-menu-item routerLink="">Jefes</button>
+                <button mat-menu-item routerLink="">Gerentes</button>
+            </mat-menu>
+            <button mat-menu-item routerLink="">Correo</button>
+            <button mat-menu-item routerLink="">Unidades</button>
+            <button mat-menu-item routerLink="">Departamentos</button>
+            <button mat-menu-item routerLink="">Cuentas</button>
+            <button mat-menu-item routerLink="">Vacaciones</button>
+        </mat-menu>
         <a mat-button [routerLink]="['/signoff']">Salir</a>
     </mat-toolbar>
 </div>
