@@ -21,6 +21,8 @@ import { PassMroComponent } from './pass-mro/pass-mro.component';
 import { AddProvidersComponent } from './add-providers/add-providers.component';
 import { ModProvidersComponent } from './mod-providers/mod-providers.component';
 import { UsuariosAddComponent } from './usuarios-add/usuarios-add.component';
+import { UsuariosModComponent } from './usuarios-mod/usuarios-mod.component';
+import { UsuarioJefesComponent } from './usuario-jefes/usuario-jefes.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { UsuariosAddComponent } from './usuarios-add/usuarios-add.component';
     AddProvidersComponent,
     ModProvidersComponent,
     UsuariosAddComponent,
+    UsuariosModComponent,
+    UsuarioJefesComponent,
   ],
   imports: [
     BrowserModule,
